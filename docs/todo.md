@@ -18,5 +18,7 @@ setup/install the application.
 - The reader should be able to read through the OAS spec to understand the endpoints and to use the included
 code examples.
 
+- Render the OAS spec with [ReDoc](https://github.com/Redocly/redoc "Link to ReDoc")
+
 > Disclaimer: They may be typos or non working endpoints, it is on you how to deal with these :)
 Think what you should do in real life (open issue, fixing yourself).
