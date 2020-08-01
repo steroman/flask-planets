@@ -82,7 +82,7 @@ You can try the app using your favourite playground. Some examples are:
 
   ![Browser View](./docs/assets/browser-planets.gif)
 
-- Using HTTPie, type `http http://127.0.0.1:5000/planets.  
+- Using HTTPie, type `http http://127.0.0.1:5000/planets`.  
 
   ```shell
 http http://127.0.0.1:5000/planets
