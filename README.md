@@ -91,8 +91,7 @@ Content-Length: 379
 Content-Type: application/json
 Date: Fri, 24 Jul 2020 07:48:34 GMT
 Server: Werkzeug/1.0.1 Python/3.8.2
-
- [
+[
     {
         "moons": 0,
         "name": "Mercury",
