@@ -10,6 +10,9 @@ info:
     name: MIT
     url: https://choosealicense.com/licenses/mit/
   version: 1.0.0
+  x-logo:
+    url: 'https://raw.githubusercontent.com/steroman/flask-planets/main/docs/assets/nasa-logo.png'
+    altText: Nasa Logo
 servers:
 - url: https://virtserver.swaggerhub.com/steroman/planets-and-webhooks/1.0.0
   description: SwaggerHub API Auto Mocking

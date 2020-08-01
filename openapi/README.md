@@ -44,7 +44,7 @@ These instructions explain how to render your OAS with ReDoc embedding the ReDoc
 
   You can use the included index.html file as a reference.
 
-4. Enjoy your OAS.
+4. Enjoy your OAS.  
 
   ![The OAS rendered with ReDoc](/docs/assets/redoc-oas.gif)
 
