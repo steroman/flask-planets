@@ -1,5 +1,8 @@
 openapi: 3.0.0
 servers:
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/steroman/planets-and-webhooks/1.0.0
   - description: SwaggerHub API Auto Mocking
     url: http://127.0.0.1:5000/
 info:
@@ -25,6 +28,10 @@ paths:
       summary: Planet List
       operationId: GetPlanetList
       description: Get the list of planets of the solar system.
+      x-codeSamples:
+        lang: C
+        label: curl
+        source: curl --location --request GET '127.0.0.1:5000/planets'
       responses:
         '200':
           description: OK
@@ -81,14 +88,6 @@ components:
         name: Mercury
         position: 1
         moons: 82
+      description: The reference data model of the planet information.
     PlanetList:
-      type: array
-      items:
-        $ref: '#/components/schemas/PlanetInfo'
-      example:
-        - name: Mercury
-          position: 1
-          moons: 82
-        - name: Jupiter
-          position: 2
-          moons: 74
+      description: The data model for the list of planets. The model is an array of PlanetInfo objects.
