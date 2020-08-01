@@ -83,57 +83,57 @@ You can try the app using your favourite playground. Some examples are:
   ![Browser View](./docs/assets/browser-planets.gif)
 
 - Using HTTPie, type `http http://127.0.0.1:5000/planets`.  
-
   ```shell
-http http://127.0.0.1:5000/planets
-HTTP/1.0 200 OK
-Content-Length: 379
-Content-Type: application/json
-Date: Fri, 24 Jul 2020 07:48:34 GMT
-Server: Werkzeug/1.0.1 Python/3.8.2
-[
-    {
-        "moons": 0,
-        "name": "Mercury",
-        "position": 1
-    },
-    {
-        "moons": 0,
-        "name": "Venus",
-        "position": 2
-    },
-    {
-        "moons": 1,
-        "name": "Earth",
-        "position": 3
-    },
-    {
-        "moons": 2,
-        "name": "Mars",
-        "position": 4
-    },
-    {
-        "moons": 79,
-        "name": "Jupiter",
-        "position": 5
-    },
-    {
-        "moons": 62,
-        "name": "Saturn",
-        "position": 6
-    },
-    {
-        "moons": 27,
-        "name": "Uranus",
-        "position": 7
-    },
-    {
-        "moons": 14,
-        "name": "Neptune",
-        "position": 8
-    }
-]
-```
+  http http://127.0.0.1:5000/planets
+  HTTP/1.0 200 OK
+  Content-Length: 379
+  Content-Type: application/json
+  Date: Fri, 24 Jul 2020 07:48:34 GMT
+  Server: Werkzeug/1.0.1 Python/3.8.2
+
+  [
+      {
+          "moons": 0,
+          "name": "Mercury",
+          "position": 1
+      },
+      {
+          "moons": 0,
+          "name": "Venus",
+          "position": 2
+      },
+      {
+          "moons": 1,
+          "name": "Earth",
+          "position": 3
+      },
+      {
+          "moons": 2,
+          "name": "Mars",
+          "position": 4
+      },
+      {
+          "moons": 79,
+          "name": "Jupiter",
+          "position": 5
+      },
+      {
+          "moons": 62,
+          "name": "Saturn",
+          "position": 6
+      },
+      {
+          "moons": 27,
+          "name": "Uranus",
+          "position": 7
+      },
+      {
+          "moons": 14,
+          "name": "Neptune",
+          "position": 8
+      }
+  ]
+  ```
 - Use postman to send requests to the API.  
 
  ![Postman List Planets](./docs/assets/postman-planets.gif)
