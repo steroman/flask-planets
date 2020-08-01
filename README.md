@@ -16,10 +16,9 @@
 
 Planets and Webhooks is a Python-based sample [Flask](https://flask.palletsprojects.com/en/1.1.x/ "Link to Flask website") app for 2-way APIs.
 
-It serves up data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/ "Link to NASA") at `/planets` and `/planets/<position>`.
-It also logs the incoming data it receives to a `/webhook` endpoint.
+It serves up data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/ "Link to NASA") at `/planets` and `/planets/{id}`. It also logs the incoming data it receives to a `/webhook` endpoint.
 
-🏆 Forked from and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks) by [Loran Jane Mitchell](https://lornajane.net/ "Link to Lorna Jane Mitchell's personal website").
+🏆 Forked from and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks "Link to the original Planets and Webhooks GitHub project") by [Loran Jane Mitchell](https://lornajane.net/ "Link to Lorna Jane Mitchell's personal website").
 
 ## 🚀 Getting Started
 
