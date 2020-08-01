@@ -15,7 +15,7 @@ planets = [
     {"name": "Earth", "position": 3, "moons": 1},
     {"name": "Mars", "position": 4, "moons": 2},
     {"name": "Jupiter", "position": 5, "moons": 79},
-    {"name": "Saturn", "position": 6, "moons": 62},
+    {"name": "Saturn", "position": 6, "moons": 82},
     {"name": "Uranus", "position": 7, "moons": 27},
     {"name": "Neptune", "position": 8, "moons": 14},
 ]
@@ -23,7 +23,7 @@ planets = [
 
 @app.route("/planets/<id>")
 def one_planet(id):
-    return json.dumps(planets[int(id) - 1]), 200, {"Content-Type": "application/json"}
+    return json.dumps(planets[int(id)-1]), 200, {"Content-Type": "application/json"}
 
 
 @app.route("/planets")
