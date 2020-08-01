@@ -8,83 +8,63 @@
 
 - [About the Project](#📄-about)
 - [Getting Started](#🚀-getting-started)
+- [Using Planets and Webhooks](#📟-using-planets-and-webhooks)
 - [Contributing](#🤝-contributing)
 - [License](#📝-license)
-- [Credits](#🙏-credits)
 
-## 📄 About
+## 📄 About the Project
 
-Sample [Flask](https://flask.palletsprojects.com/en/1.1.x/ "Flask website") App for 2-way APIs.
+Planets and Webhooks is a Python-based sample [Flask](https://flask.palletsprojects.com/en/1.1.x/ "Link to Flask website") app for 2-way APIs.
 
 It serves up data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/ "Link to NASA") at `/planets` and `/planets/<position>`.
 It also logs the incoming data it receives to a `/webhook` endpoint.
 
-Forked and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks).
+🏆 Forked from and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks) by [Loran Jane Mitchell](https://lornajane.net/ "Link to Lorna Jane Mitchell's personal website").
 
 ## 🚀 Getting Started
 
-### Requirements
+This section explains how to get your sample Planets and Webhooks app up and running and be able to test its 2-way API.
 
-- [Python](https://www.python.org/ "Python website")
-- [pip](https://pypi.org/project/pip/ "Link to pip")
-- [venv](https://docs.python.org/3/library/venv.html "Link to venv docs")
-- [HTTPie](https://httpie.org/ "Link to HTTPie")
-- [Postman](https://www.postman.com/ "Link to Postman")
+### Prerequisites
 
-We recommend [pyenv](https://github.com/pyenv/pyenv "Link to pyenv on GitHub") to manage multiple Python versions.
+These are the tools you need to have installed on your machine for the app to work and to play around with the API.
 
-## Install
+- Root permissions, to install and configure some tools
+- [A GitHub account](https://github.com/join "Link to the GitHub sign up page"), to clone the repository
+- [Python 3.8.2](https://www.python.org/downloads/release/python-382/ "Link to the Python 3.8.2 download page") or higher, as the main engine
+- [pip](https://pip.pypa.io/en/stable/installing/ "Link to pip install instructions"), which comes pre-installed if you downloaded Python 3.8.2 from the official website
+- [venv](https://docs.python.org/3/library/venv.html "Link to venv docs") to create a virtual environment
 
-Clone the repository
+You also need an HTTP client to check that the app is working properly and an API testing tool. We recommend:
+  - [HTTPie](https://httpie.org/ "Link to HTTPie"), if you are into CLI HTTP clients  
+  - [Postman](https://www.postman.com/ "Link to Postman"), a cool REST API design and testing tool
 
-### SSH
+If you need to switch between multiple Python versions, installing [pyenv](https://github.com/pyenv/pyenv "Link to pyenv") before setting this up may be a good idea.
 
-```shell
-git clone git@github.com:ocular-d/flask-planets.git
-```
+## 📟 Using Planets and Webhooks
 
-### HTTPS
+After installing all the necessary, it is time to use the app. Here is how.
 
-```shell
-https://github.com/ocular-d/flask-planets.git
-```
+### Set up the app
 
+Follow these steps to set up the app.
 
-Change into the cloned repository
+1. Clone the repository using your preferred method:
 
-```shell
-cd flask-planets
-```
+ - **SSH**: `git clone git@github.com:ocular-d/flask-planets.git`
+ - **HTTPS**: `https://github.com/ocular-d/flask-planets.git`
 
-Switch to Python 3.8.2
+2. Type `cd flask-planets` to browse to the cloned repository.
 
-```shell
-pyenv local 3.8.2
-```
+3. (Optional) If you were using an unsupported Python version, switch to Python 3.8.2 typing `pyenv local 382`.
 
-The repository includes a Makefile for effortless installation.
+4. Type `make venv` to create the virtual environment and install its depeendencies.
 
-```make
-make venv
-```
+  For further information on virtual environments, see [venv documentation](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments "Link to venv documentation").
 
-This will create a [virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments "Link to venv docs")
-and install all needed Python packages into this environment.
+5. Type `source venv/bin/activate` to activate the environment.
 
-After the setup is finished is it time to activate the virtual environment.
-
-```shell
-source venv/bin/activate
-```
-
-Start the application:
-
-```shell
-make run
-```
-
-If everything goes well you should see output like this:
-
+6. Type `make run` to start the app. A successful procedure will show:  
 ```shell
  * Serving Flask app "app.py"
  * Environment: production
@@ -94,13 +74,17 @@ If everything goes well you should see output like this:
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-Open your browser and go to http://127.0.0.1:5000/planets
+### Play with the App
 
-![Browser View](./docs/assets/flask-planets.png)
+You can try the app using your favourite playground. Some examples are:
 
-Check the output with [HttPie](https://httpie.org/ "Link to HTTPie")
+- Use your web browser to go to http://127.0.0.1:5000/planets.
 
-```shell
+  ![Browser View](./docs/assets/browser-planets.gif)
+
+- Using HTTPie, type `http http://127.0.0.1:5000/planets.  
+
+  ```shell
 http http://127.0.0.1:5000/planets
 HTTP/1.0 200 OK
 Content-Length: 379
@@ -108,7 +92,7 @@ Content-Type: application/json
 Date: Fri, 24 Jul 2020 07:48:34 GMT
 Server: Werkzeug/1.0.1 Python/3.8.2
 
-[
+ [
     {
         "moons": 0,
         "name": "Mercury",
@@ -151,10 +135,9 @@ Server: Werkzeug/1.0.1 Python/3.8.2
     }
 ]
 ```
+- Use postman to send requests to the API.  
 
-Check with [Postman](https://www.postman.com/ "Link to Postman")
-
-![Postman List Planets](./docs/assets/postman-planets.png)
+ ![Postman List Planets](./docs/assets/postman-planets.gif)
 
 ## 🤝 Contributing
 
@@ -165,7 +148,3 @@ Be it filing bugs, formulating enhancements, creating pull requests, or any othe
 ## 📝 License
 
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/ "Link to license") license.
-
-## Credits
-
-- [Lorna Jane Mitchell](https://github.com/lornajane "Link to bio on GitHub")
