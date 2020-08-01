@@ -1,7 +1,7 @@
 <div align="center">
 
 # Planets and Webhooks API
- ![NASA's logo](//docs/assets/nasa-logo.png)
+ ![NASA's logo](/docs/assets/nasa-logo.png)
 
 </div>
 
@@ -46,6 +46,6 @@ These instructions explain how to render your OAS with ReDoc embedding the ReDoc
 
 4. Enjoy your OAS.
 
-  ![The OAS rendered with ReDoc](//docs/assets/redoc-oas.gif)
+  ![The OAS rendered with ReDoc](/docs/assets/redoc-oas.gif)
 
 ### Render an API hosted locally
