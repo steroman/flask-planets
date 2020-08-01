@@ -1,10 +1,7 @@
 openapi: 3.0.0
 servers:
-# Added by API Auto Mocking Plugin
-  - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/steroman/planets-and-webhooks/1.0.0
-  - description: SwaggerHub API Auto Mocking
-    url: http://127.0.0.1:5000/
+  - description: Your localhost server
+    url: http://127.0.0.1:5000
 info:
   description: The one and only API combining astrology and webhooks. It allows you to retrieve information about the planets of the solar system provided by (Nasa Link)
   version: 1.0.0
@@ -29,9 +26,8 @@ paths:
       operationId: GetPlanetList
       description: Get the list of planets of the solar system.
       x-codeSamples:
-        lang: C
-        label: curl
-        source: curl --location --request GET '127.0.0.1:5000/planets'
+        - lang: C
+          source: curl --location --request GET '127.0.0.1:5000/planets'
       responses:
         '200':
           description: OK
@@ -50,6 +46,9 @@ paths:
       summary: Planet Info by ID
       operationId: GetPlanetInfo
       description: Get the planet info using their position as the ID.
+      x-codeSamples:
+        - lang: C
+          source: curl --location --request GET '127.0.0.1:5000/planets/1'
       parameters:
         - in: path
           required: true
