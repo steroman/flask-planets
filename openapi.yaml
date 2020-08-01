@@ -1,0 +1,98 @@
+openapi: 3.0.0
+info:
+  title: Planets and Webhooks
+  description: The one and only API combining astrology and webhooks. It allows you
+    to retrieve information about the planets of the solar system provided by (Nasa
+    Link)
+  contact:
+    email: doyou@space.out
+  license:
+    name: MIT
+    url: https://choosealicense.com/licenses/mit/
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/steroman/planets-and-webhooks/1.0.0
+  description: SwaggerHub API Auto Mocking
+- url: http://localhost:5000
+  description: SwaggerHub API Auto Mocking
+tags:
+- name: planets
+  description: Information about the planets of the solar system.
+paths:
+  /planets:
+    get:
+      tags:
+      - planets
+      summary: Get the list of planets of the solar system.
+      description: Blabla
+      operationId: GetPlanetList
+      responses:
+        "200":
+          description: The list of planets of the solar system.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PlanetList'
+        "500":
+          description: undeperforming server can't process your request
+  /planets/{id}:
+    get:
+      tags:
+      - planets
+      summary: Get info about a specific planet using their position as the ID.
+      description: Get the planet info using their position as the ID.
+      operationId: GetPlanetInfo
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          maximum: 8
+          minimum: 1
+          type: number
+      responses:
+        "200":
+          description: The list of planets.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PlanetInfo'
+components:
+  schemas:
+    PlanetInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the planet
+          example: Mercury
+        position:
+          type: number
+          description: The planet order starting from the Sun
+          example: 1
+        moons:
+          type: number
+          description: The total number of moons for the planet, which is the sum
+            of the confirmed and provisional moons provided by NASA
+          example: 82
+      example:
+        name: Mercury
+        position: 1
+        moons: 82
+    PlanetList:
+      type: array
+      example:
+      - name: Mercury
+        position: 1
+        moons: 82
+      - name: Jupiter
+        position: 2
+        moons: 74
+      items:
+        $ref: '#/components/schemas/PlanetInfo'
