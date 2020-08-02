@@ -4,7 +4,7 @@
 
 </div>
 
-## Table of Contents
+## 📖 Table of Contents
 
 - [About the Project](#📄-about)
 - [Getting Started](#🚀-getting-started)
@@ -12,7 +12,7 @@
 - [Contributing](#🤝-contributing)
 - [License](#📝-license)
 
-## 📄 About the Project
+## 🔍 About the Project
 
 Planets and Webhooks is a Python-based sample [Flask](https://flask.palletsprojects.com/en/1.1.x/ "Link to Flask website") app for 2-way APIs.
 
@@ -46,7 +46,7 @@ If you need to switch between multiple Python versions, installing [pyenv](https
 
 After installing all the necessary, it is time to use the app. Here is how.
 
-### Set up the app
+### Set Up the App
 
 Follow these steps to set up the app.
 
@@ -136,7 +136,7 @@ You can try the app using your favourite playground. Some examples are:
   ]
   ```
 - Use postman to send requests to the API.  
-  
+
   ![Postman List Planets](./docs/assets/postman-planets.gif)
 
 ## 🤝 Contributing
