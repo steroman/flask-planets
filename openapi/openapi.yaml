@@ -1,9 +1,9 @@
-openapi: 3.0.0
+openapi: 3.0.3
 servers:
   - description: Your localhost server
     url: http://127.0.0.1:5000
 info:
-  description: The one and only API combining astrology and webhooks. It allows you to retrieve information about the planets of the solar system provided by NASA
+  description: The one and only API combining astrology and webhooks. It allows you to retrieve information about the planets of the solar system provided by NASA.
   version: 1.0.0
   x-logo:
     url: 'https://raw.githubusercontent.com/steroman/flask-planets/main/docs/assets/nasa-logo.png'
@@ -11,12 +11,19 @@ info:
   title: Planets and Webhooks
   contact:
     email: doyou@space.out
+    name: NASA
+    url: 'www.nasa.org'
   license:
     name: MIT
     url: 'https://choosealicense.com/licenses/mit/'
 tags:
   - name: planets
-    description: Information about the planets of the solar system.
+    description: Information about the planets of the solar system
+  - name: webhooks
+    description: Webhooks allow you to log requests made to the API.
+externalDocs:
+  description: Source Data
+  url: https://solarsystem.nasa.gov/moons/in-depth/
 paths:
   /planets:
     get:
@@ -67,6 +74,31 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/PlanetInfo'
+  /webhook:
+    get:
+      tags:
+       - webhooks
+      summary: Get Webhook
+      operationId: GetWebhook
+      description: Get a list of wehooks.
+      x-codeSamples:
+        - lang: C
+          source: curl --location --request GET '127.0.0.1:5000/webhook'
+      responses:
+        200:
+          description: The list of webhooks.
+    post:
+      tags:
+       - webhooks
+      summary: Post Webhook
+      operationId: PostWebhook
+      description: Subscribe to the webhook.
+      x-codeSamples:
+        - lang: C
+          source: curl --location --request POST '127.0.0.1:5000/webhook'
+      responses:
+        200:
+          description: Subscribed to the webhook.
 components:
   schemas:
     PlanetInfo:
@@ -78,13 +110,11 @@ components:
           description: The total number of moons for the planet. It includes its confirmed and provisional moons.
         name:
           type: string
-          example: Mercury
+          example: Saturn
           description: The official name of the planet according to NASA.
         position:
           type: integer
-          minimum: 1
-          maximum: 8
-          example: 4
+          example: 5
           description: The order of the planet from the Sun.
     PlanetList:
       description: The planet list data model.
