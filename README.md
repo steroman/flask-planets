@@ -59,7 +59,7 @@ Follow these steps to set up the app.
 
 3. (Optional) If you were using an unsupported Python version, switch to Python 3.8.2 typing `pyenv local 382`.
 
-4. Type `make venv` to create the virtual environment and install its depeendencies.
+4. Type `make venv` to create the virtual environment and install its dependencies.
 
   For further information on virtual environments, see [venv documentation](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments "Link to venv documentation").
 
@@ -136,7 +136,7 @@ You can try the app using your favourite playground. Some examples are:
   ]
   ```
 - Use postman to send requests to the API.  
-  
+
   ![Postman List Planets](./docs/assets/postman-planets.gif)
 
 ## 🤝 Contributing
