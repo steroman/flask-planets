@@ -2,16 +2,15 @@
 
 This document contains notes and comments that arose when trying to improve the main repo's documentation.
 
-## Tech
+## 💻 Tech
 
 - Felt safer by forking the source repo and playing around there.
 - Had to install Homebrew in order to get pyenv. Since I believe it depends on the OS, I didn't include it in the requirements.
 - Decided to go ahead and fix the error about Saturn's moons in the code
-- Found a bug in the /planets/{id} path parameters which started to count backwards when using "0" or negative integers up to "-7". It seemed that the issue is caused by some "-1" in the code, but since I have no Python knowledge I preferred to open an issue.
+- Found a bug in the /planets/{id} path parameters which started to count backwards when using "0" or negative integers up to "-7". It seemed that the issue is caused by some "-1" in the code, or by the fact that the code is still pulling from the array of planets, instead of their position value, but since I have no Python knowledge I preferred to open an issue.
 - Intentionally left alt-text for images out. It felt unnecessary considered the scope of the exercise
-- I intentionally avoided explaining how to bundle ReDoc in the repo because I felt it created too many dependencies and would alter the repo too much
 
-## Style and Tone
+## 📢 Style and Tone
 
 - I preferred more verbose instructions placed in sequenced steps
 - I also squeezed MD's indentation and line breaking capabilities as much as I could to increase visual hierarchy of items, context info, media
@@ -28,7 +27,7 @@ This document contains notes and comments that arose when trying to improve the 
 - Aware that the code example of /planets/{id} only includes one object in the array, but workarounds would have made the schema too complex for the scope of this exercise
 - Intentionally wrote more verbose status code descriptions even if they didn't match the response in the code ('OK')
 
-## Architecture
+## 📐 Architecture
 
 - There was not much info about /webhook, so I limited myself to documenting basic methods and responses
  - Not being a Python expert I couldn't gather extra info by analysing the code
