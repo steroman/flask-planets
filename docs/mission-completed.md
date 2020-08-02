@@ -7,9 +7,8 @@ This document contains notes and comments that arose when trying to improve the 
 - Felt safer by forking the source repo and playing around there.
 - Had to install Homebrew in order to get pyenv. Since I believe it depends on the OS, I didn't include it in the requirements.
 - Decided to go ahead and fix the error about Saturn's moons in the code
-- Found a bug in the /planets/{id} path parameters which started to count backwards when using "0" or negative integers up to "-7". It seemed that the issue is caused by some "-1" in the code, but since I have no Python knowledge I preferred to open an issue.
+- Found a bug in the /planets/{id} path parameters which started to count backwards when using "0" or negative integers up to "-7". It seemed that the issue is caused by some "-1" in the code, or by the fact that the code is still pulling from the array of planets, instead of their position value, but since I have no Python knowledge I preferred to open an issue.
 - Intentionally left alt-text for images out. It felt unnecessary considered the scope of the exercise
-- I intentionally avoided explaining how to bundle ReDoc in the repo because I felt it created too many dependencies and would alter the repo too much
 
 ## Style and Tone
 
