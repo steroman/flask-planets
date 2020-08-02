@@ -60,7 +60,7 @@ paths:
           description: The planet's order from the Sun
           name: id
           schema:
-            type: number
+            type: integer
             minimum: 1
             maximum: 8
             example: 4
@@ -101,10 +101,6 @@ components:
     PlanetInfo:
       description: The planet information data model
       properties:
-        moons:
-          type: integer
-          example: 82
-          description: The total number of moons for the planet. It includes its confirmed and provisional moons.
         name:
           type: string
           example: Saturn
@@ -113,6 +109,10 @@ components:
           type: integer
           example: 5
           description: The order of the planet from the Sun
+        moons:
+          type: integer
+          example: 82
+          description: The total number of moons for the planet. It includes its confirmed and provisional moons.
     PlanetList:
       description: The planet list data model
       type: array
