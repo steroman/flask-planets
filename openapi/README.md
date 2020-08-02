@@ -12,9 +12,9 @@
 
 ## 📄 About Planets and Webhooks API
 
-Planets and Webhooks is a REST API based on [OpenAPI](https://www.openapis.org/ "Link to the OpenAPI website"). It provides data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/ "Link to NASA") at `/planets` and `/planets/{id}`. It also logs the incoming data it receives to a `/webhook` endpoint.
+Planets and Webhooks is a REST API based on [OpenAPI](https://www.openapis.org/ "Link to the OpenAPI website"). It provides data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/ "Link to NASA") at `/planets` and `/planets/{id}`. Using the `/webhook` endpoint, you can also log the incoming requests to the API.
 
-Its OpenAPI Specification (OAS) follows OpenAPI 3.0.0.
+Planets and Webhooks is based on OpenAPI 3.0.3.
 
 ## 📝 Render the API with ReDoc
 
@@ -47,5 +47,3 @@ These instructions explain how to render your OAS with ReDoc embedding the ReDoc
 4. Enjoy your OAS.  
 
   ![The OAS rendered with ReDoc](/docs/assets/redoc-oas.gif)
-
-### Render an API hosted locally
