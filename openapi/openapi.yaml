@@ -1,8 +1,5 @@
 openapi: 3.0.3
 servers:
-# Added by API Auto Mocking Plugin
-  - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/steroman/planets-and-webhooks/1.0.0
   - description: Your localhost server
     url: http://127.0.0.1:5000
 info:
@@ -36,7 +33,7 @@ paths:
       operationId: GetPlanetList
       description: A list of the planets of the solar system
       x-codeSamples:
-        - lang: C
+        - lang: curl
           source: curl --location --request GET '127.0.0.1:5000/planets'
       responses:
         200:
@@ -54,7 +51,7 @@ paths:
       summary: Planet Info by ID
       operationId: GetPlanetInfo
       x-codeSamples:
-        - lang: C
+        - lang: curl
           source: curl --location --request GET '127.0.0.1:5000/planets/1'
       parameters:
         - in: path
@@ -80,7 +77,7 @@ paths:
       operationId: GetWebhook
       description: Get a list of wehooks
       x-codeSamples:
-        - lang: C
+        - lang: curl
           source: curl --location --request GET '127.0.0.1:5000/webhook'
       responses:
         200:
@@ -92,7 +89,6 @@ paths:
       operationId: PostWebhook
       description: Subscribe to the webhook
       x-codeSamples:
-        - lang: C
           source: curl --location --request POST '127.0.0.1:5000/webhook'
       responses:
         200:
