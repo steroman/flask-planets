@@ -9,19 +9,19 @@ This document contains notes and comments that arose when trying to improve the 
 - Decided to go ahead and fix the error about Saturn's moons in the code
 - Found a bug in the /planets/{id} path parameters which started to count backwards when using "0" or negative integers up to "-7". It seemed that the issue is caused by some "-1" in the code, but since I have no Python knowledge I preferred to open an issue.
 - Intentionally left alt-text for images out. It felt unnecessary considered the scope of the exercise
-- I intentionally avoided explaining how to bundle redoc in the repo because I felt it created too many dependencies and would alter the repo too much
+- I intentionally avoided explaining how to bundle ReDoc in the repo because I felt it created too many dependencies and would alter the repo too much
 
 ## Style and Tone
 
 - I preferred more verbose instructions placed in sequenced steps
 - I also squeezed MD's indentation and line breaking capabilities as much as I could to increase visual hierarchy of items, context info, media
 - The intro talked about /planets/position but I felt that didn't match reality, where what was "position" is actually called ID. so I changed it and added explanation
-- In steps, I preferred inline code to codeblocks, since commands were short. I lost beautified code, but I felt the information flowed better. Some refs I checked to decide:
+- In steps, I preferred inline code to code blocks, since commands were short. I lost beautified code, but I felt the information flowed better. Some refs I checked to decide:
   - [Atlassian Forum](https://community.atlassian.com/t5/Confluence-questions/Inline-code-blocks/qaq-p/263017)
   - [Udemy Support Article](https://support.udemy.com/hc/en-us/articles/229233407-Using-Code-Blocks-and-Inline-Code#)
 - Gave consistency to Link tooltips ("Link to..")
 - Removed inconsistencies between "app", "App", and "application"
-- Played around with heading levels to reorganize content's hierarchy
+- Played around with heading levels to reorganise content's hierarchy
 - Used emojis consistently in h2 headings
 - Tried to maintain the overall relaxed tone with a couple puns, emojis, and so on
   - However, I avoided contractions
@@ -41,3 +41,4 @@ This document contains notes and comments that arose when trying to improve the 
 - Created parallel construction between ToC heading text and original section title
 - Intentionally avoided to ignore errors from non-allowed methods assuming that the user can only use documented methods
 - Mimicked [Redoc's recommended folder structure](https://github.com/Redocly/create-openapi-repo/tree/master/template) to host OAS files
+- Didn't document alternative content-types since the code doesn't foresee them

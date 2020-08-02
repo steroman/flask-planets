@@ -42,9 +42,6 @@ paths:
             application/json:
               schema:
                   $ref: "#/components/schemas/PlanetList"
-            application/xml:
-              schema:
-                  $ref: "#/components/schemas/PlanetList"
         500:
           description: Internal Server Error
   /planets/{id}:
@@ -72,9 +69,6 @@ paths:
           description: Planet information correctly retrieved
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/PlanetInfo'
-            application/xml:
               schema:
                 $ref: '#/components/schemas/PlanetInfo'
   /webhook:
