@@ -3,7 +3,7 @@ servers:
   - description: Your localhost server
     url: http://127.0.0.1:5000
 info:
-  description: The one and only API combining astrology and webhooks. It allows you to retrieve information about the planets of the solar system provided by (Nasa Link)
+  description: The one and only API combining astrology and webhooks. It allows you to retrieve information about the planets of the solar system provided by NASA
   version: 1.0.0
   x-logo:
     url: 'https://raw.githubusercontent.com/steroman/flask-planets/main/docs/assets/nasa-logo.png'
@@ -29,21 +29,19 @@ paths:
         - lang: C
           source: curl --location --request GET '127.0.0.1:5000/planets'
       responses:
-        '200':
-          description: OK
+        200:
+          description: Planet list successfully retrieved.
           content:
             application/json:
               schema:
-                type: array
-                items:
                   $ref: "#/components/schemas/PlanetList"
-        '500':
+        500:
           description: Internal Server Error
   /planets/{id}:
     get:
       tags:
        - planets
-      summary: Planet Info by ID
+      summary: Planet Info
       operationId: GetPlanetInfo
       description: Get the planet info using their position as the ID.
       x-codeSamples:
@@ -52,41 +50,44 @@ paths:
       parameters:
         - in: path
           required: true
+          description: The planet's order from the Sun.
           name: id
           schema:
             type: number
             minimum: 1
             maximum: 8
+            example: 4
       responses:
-        '200':
-          description: The list of planets.
+        200:
+          description: Planet information correctly retrieved.
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/PlanetInfo'
+                $ref: '#/components/schemas/PlanetInfo'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PlanetInfo'
 components:
   schemas:
     PlanetInfo:
-      type: object
+      description: The planet information data model.
       properties:
+        moons:
+          type: integer
+          example: 82
+          description: The total number of moons for the planet. It includes its confirmed and provisional moons.
         name:
-          description: The name of the planet
           type: string
           example: Mercury
+          description: The official name of the planet according to NASA.
         position:
-          description: The planet order starting from the Sun
-          type: number
-          example: 1
-        moons:
-          description: The total number of moons for the planet, which is the sum of the confirmed and provisional moons provided by NASA
-          type: number
-          example: 82
-      example:
-        name: Mercury
-        position: 1
-        moons: 82
-      description: The reference data model of the planet information.
+          type: integer
+          minimum: 1
+          maximum: 8
+          example: 4
+          description: The order of the planet from the Sun.
     PlanetList:
-      description: The data model for the list of planets. The model is an array of PlanetInfo objects.
+      description: The planet list data model.
+      type: array
+      items:
+        $ref: '#/components/schemas/PlanetInfo'
