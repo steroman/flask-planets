@@ -20,7 +20,7 @@ tags:
   - name: planets
     description: Information about the planets of the solar system
   - name: webhooks
-    description: Webhooks allow you to log requests made to the API.
+    description: Webhooks allow you to log requests made to the API
 externalDocs:
   description: Source Data
   url: https://solarsystem.nasa.gov/moons/in-depth/
@@ -31,15 +31,18 @@ paths:
         - planets
       summary: Planet List
       operationId: GetPlanetList
-      description: Get the list of planets of the solar system.
+      description: Get the list of planets of the solar system
       x-codeSamples:
         - lang: C
           source: curl --location --request GET '127.0.0.1:5000/planets'
       responses:
         200:
-          description: Planet list successfully retrieved.
+          description: Planet list successfully retrieved
           content:
             application/json:
+              schema:
+                  $ref: "#/components/schemas/PlanetList"
+            application/xml:
               schema:
                   $ref: "#/components/schemas/PlanetList"
         500:
@@ -50,14 +53,14 @@ paths:
        - planets
       summary: Planet Info
       operationId: GetPlanetInfo
-      description: Get the planet info using their position as the ID.
+      description: Get the planet info using their position as the ID
       x-codeSamples:
         - lang: C
           source: curl --location --request GET '127.0.0.1:5000/planets/1'
       parameters:
         - in: path
           required: true
-          description: The planet's order from the Sun.
+          description: The planet's order from the Sun
           name: id
           schema:
             type: number
@@ -66,7 +69,7 @@ paths:
             example: 4
       responses:
         200:
-          description: Planet information correctly retrieved.
+          description: Planet information correctly retrieved
           content:
             application/json:
               schema:
@@ -80,29 +83,29 @@ paths:
        - webhooks
       summary: Get Webhook
       operationId: GetWebhook
-      description: Get a list of wehooks.
+      description: Get a list of wehooks
       x-codeSamples:
         - lang: C
           source: curl --location --request GET '127.0.0.1:5000/webhook'
       responses:
         200:
-          description: The list of webhooks.
+          description: The list of webhooks
     post:
       tags:
        - webhooks
       summary: Post Webhook
       operationId: PostWebhook
-      description: Subscribe to the webhook.
+      description: Subscribe to the webhook
       x-codeSamples:
         - lang: C
           source: curl --location --request POST '127.0.0.1:5000/webhook'
       responses:
         200:
-          description: Subscribed to the webhook.
+          description: Subscribed to the webhook
 components:
   schemas:
     PlanetInfo:
-      description: The planet information data model.
+      description: The planet information data model
       properties:
         moons:
           type: integer
@@ -111,13 +114,13 @@ components:
         name:
           type: string
           example: Saturn
-          description: The official name of the planet according to NASA.
+          description: The official name of the planet according to NASA
         position:
           type: integer
           example: 5
-          description: The order of the planet from the Sun.
+          description: The order of the planet from the Sun
     PlanetList:
-      description: The planet list data model.
+      description: The planet list data model
       type: array
       items:
         $ref: '#/components/schemas/PlanetInfo'
