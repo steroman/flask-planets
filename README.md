@@ -136,8 +136,8 @@ You can try the app using your favourite playground. Some examples are:
   ]
   ```
 - Use postman to send requests to the API.  
-
- ![Postman List Planets](./docs/assets/postman-planets.gif)
+  
+  ![Postman List Planets](./docs/assets/postman-planets.gif)
 
 ## 🤝 Contributing
 
