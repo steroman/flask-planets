@@ -28,7 +28,7 @@ ReDoc is a JavaScript lightweight OpenAPI documentation engine that allows you t
 
 ### Render an OAS with ReDoc Standalone
 
-ReDoc does not allow you to render your OAS locally for security reasons, unless you are bundling the document with [redoc-cli](https://github.com/Redocly/redoc/tree/master/cli "Link to ReDoc CLI GitHub page"), which adds extra dependencies because ReDoc is a JavaScript application.
+If you want to bundle your OAS in your repo, you can do it with [redoc-cli](https://github.com/Redocly/redoc/tree/master/cli "Link to ReDoc CLI GitHub page"). redoc-cli it's a JavaScript app, which would add extra dependencies to your repo.
 
 These instructions explain how to render your OAS with ReDoc embedding the ReDoc Standalone script.
 
