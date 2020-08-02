@@ -17,7 +17,7 @@ Planets and Webhooks is a two-ways API based on [OpenAPI 3.0.3](https://www.open
 The Planet and Webhooks OpenAPI Specification (OAS) is available in three formats:
 
  - as a [YAML file](openapi.yaml)
- - as a [standalone HTML file](standalone-oas.html)
+ - as a [standalone HTML file](redoc-static.html)
  - as an [HTML file](index.html) that embeds a ReDoc Script and points to the YAML file
 
 ## 📟 Render an API with ReDoc
@@ -67,7 +67,7 @@ One way to render an API source file is to build an HTML file with [redoc-cli](h
 
 4. Bundle the API typing `redoc-cli bundle <specfile.yaml>`.
 
-5. Take the generated HTML file anywhere you want to. For example you can [place it in your API repo](standalone-oas.html).
+5. Take the generated *redoc-static.html* file anywhere you want to. For example you can [place it in your API repo](standalone-oas.html).
 
   ```cli
   Prerendering docs
