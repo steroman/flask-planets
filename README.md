@@ -20,7 +20,7 @@ It serves up data about planets from [NASA data](https://solarsystem.nasa.gov/mo
 
 You can check the reference API specification by opening [index.html](/openapi/index.html) available in this repo.
 
-🏆 Forked from and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks "Link to the original Planets and Webhooks GitHub project") by [Loran Jane Mitchell](https://lornajane.net/ "Link to Lorna Jane Mitchell's personal website").
+🏆 Forked from and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks "Link to the original Planets and Webhooks GitHub project") by [Lorna Jane Mitchell](https://lornajane.net/ "Link to Lorna Jane Mitchell's personal website").
 
 ## 🚀 Getting Started
 
