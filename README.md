@@ -18,7 +18,7 @@ Planets and Webhooks is a Python-based sample [Flask](https://flask.palletsproje
 
 It serves up data about planets from [NASA data](https://solarsystem.nasa.gov/moons/in-depth/ "Link to NASA") at `/planets` and `/planets/{id}`. It also logs the incoming data it receives to a `/webhook` endpoint.
 
-You can check the reference API specification opening [index.html](/openapi/index.html) available in this repo.
+You can check the reference API specification by opening [index.html](/openapi/index.html) available in this repo.
 
 🏆 Forked from and based on [flask-planets-and-webhooks](https://github.com/lornajane/flask-planets-and-webhooks "Link to the original Planets and Webhooks GitHub project") by [Loran Jane Mitchell](https://lornajane.net/ "Link to Lorna Jane Mitchell's personal website").
 
@@ -28,7 +28,7 @@ This section explains how to get your sample Planets and Webhooks app up and run
 
 ### Prerequisites
 
-These are the tools you need to have installed on your machine for the app to work and to play around with the API.
+These are the tools you need to have installed on your machine for the app to work and to play around with the API:
 
 - Root permissions, to install and configure some tools
 - [A GitHub account](https://github.com/join "Link to the GitHub sign up page"), to clone the repository
@@ -36,7 +36,7 @@ These are the tools you need to have installed on your machine for the app to wo
 - [pip](https://pip.pypa.io/en/stable/installing/ "Link to pip install instructions"), which comes pre-installed if you downloaded Python 3.8.2 from the official website
 - [venv](https://docs.python.org/3/library/venv.html "Link to venv docs") to create a virtual environment
 
-You also need an HTTP client to check that the app is working properly and an API testing tool. We recommend:
+You also need an HTTP client to check that the app is working properly as well as an API testing tool. We recommend:
   - [HTTPie](https://httpie.org/ "Link to HTTPie"), if you are into CLI HTTP clients  
   - [Postman](https://www.postman.com/ "Link to Postman"), a cool REST API design and testing tool
 
@@ -44,7 +44,7 @@ If you need to switch between multiple Python versions, installing [pyenv](https
 
 ## 📟 Using Planets and Webhooks
 
-After installing all the necessary, it is time to use the app. Here is how.
+After installing all the necessary tools, it is time to use the app. Here is how.
 
 ### Set Up the App
 
@@ -57,11 +57,11 @@ Follow these steps to set up the app.
 
 2. Type `cd flask-planets` to browse to the cloned repository.
 
-3. (Optional) If you were using an unsupported Python version, switch to Python 3.8.2 typing `pyenv local 382`.
+3. (Optional) If you were using an unsupported Python version, switch to Python 3.8.2 by typing `pyenv local 382`.
 
 4. Type `make venv` to create the virtual environment and install its dependencies.
 
-  For further information on virtual environments, see [venv documentation](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments "Link to venv documentation").
+  For further information on virtual environments, see the [venv documentation](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments "Link to venv documentation").
 
 5. Type `source venv/bin/activate` to activate the environment.
 
